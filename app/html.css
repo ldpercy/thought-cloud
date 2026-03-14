@@ -6,12 +6,14 @@
 
 
 html {
-	--page-background-light: lightskyblue;
-	--page-background-dark: midnightblue;
+	--project-colour: skyblue;
 
+	--page-background-light: oklab(from var(--project-colour) 0.80 a b / alpha);
+	--page-background-dark: oklab(from var(--project-colour) 0.20 a b / alpha);
 
-	--accent-light: deepskyblue;
-	--accent-dark: lightskyblue;
+	--accent-light: oklab(from var(--project-colour) 0.40 a b / alpha);
+	--accent-dark: oklab(from var(--project-colour) 0.60 a b / alpha);
+
 	--transition-duration: 0.5s;
 
 
