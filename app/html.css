@@ -6,8 +6,8 @@
 
 
 html {
-	--page-background-light: #fcfcfc;
-	--page-background-dark: #111111;
+	--page-background-light: lightskyblue;
+	--page-background-dark: midnightblue;
 
 
 	--accent-light: deepskyblue;
