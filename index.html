@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Thought Cloud v0.0.0 by ldpercy</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Thought Cloud v0.0.0 by ldpercy">
+	<meta name="color-scheme" content="dark light">
+	<meta name="theme-color" content="skyblue"/>
+	<link rel="icon" href="./favicon.svg"/>
+
+</head>
+<body>
+
+	<div class="control-group control-left">
+		<form id="form-application" tabindex="0">
+			<h1>Thought Cloud</h1>
+
+			<button type="button" id="button-showAppInfo" onclick="document.getElementById('dialog-appInfo').showModal();"><strong>🛈 Thought Cloud help</strong></button>
+
+		</form>
+	</div><!-- control-left -->
+
+
+	<!-- svg-element
+	-->
+	<svg id="svg-element" class="svg-element" viewBox="-1200 -1200 2400 2400" preserveAspectRatio="xMidYMid meet" tabindex="0">
+
+		<defs>
+			<path id="def-marker"  d="m0,-30 L10,10 L-10 10 z"/>  <!-- class="marker" -->
+			<circle id="def-point" class="def-point"/>
+
+			<g class="grid">
+				<marker id="axisMarker-cartesian" class="axis" markerWidth="100" markerHeight="100" refX="0" refY="0" viewBox="-50 -50 100 100" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+					<path d="m-20,-20 L50,0 L-20,20 "/>
+				</marker>
+				<marker id="axisMarker-polar" class="axis" markerWidth="100" markerHeight="100" refX="0" refY="0" viewBox="-50 -50 100 100" orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+					<path d="m20,-20 L0,50 L-20,-20"/>
+				</marker>
+			</g>
+
+		</defs>
+
+		<g id="group-page" class="page">
+			<g id="group-grid" class="grid">
+
+				<g id="group-cartesian">
+					<g id="group-cartesianGrid" class="cartesian-grid"></g>
+					<g id="group-cartesianPoint" class="cartesian-point"></g>
+				</g>
+			</g>
+
+			<g id="group-drawing" class="drawing show-marker">
+				<!-- drawing elements go in here -->
+			</g>
+
+		</g><!-- page -->
+	</svg>
+
+
+	<dialog id="dialog-appInfo" closedby="any">
+		<h1>
+			<a href="https://github.com/ldpercy/thought-cloud/">Thought Cloud</a>
+			<a href="https://github.com/ldpercy/thought-cloud/releases/tag/v0.0.0">v0.0.0</a>
+			by <a href="https://github.com/ldpercy/">ldpercy</a>
+		</h1>
+
+		<h2>Keyboard shortcuts</h2>
+		<dl>
+			<dt><kbd>?</kbd></dt>
+			<dd>Show this dialog</dd>
+		</dl>
+
+
+	</dialog>
+
+
+</body>
+</html>
