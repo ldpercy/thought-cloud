@@ -1,0 +1,76 @@
+
+.grid {
+	--colour-cartesian: grey;
+	--colour-polar: var(--pink);
+	fill:none;
+
+	stroke-width: 1px;
+
+	.cartesian-grid {
+		stroke: var(--colour-cartesian);
+		.axis  { stroke-width: 5px; }
+		.major { stroke-width: 2px; }
+		.minor { stroke-width: 1px; }
+		.label { fill: var(--colour-cartesian); }
+		.origin { r: 10px; stroke-width: 3px; }
+
+		.axis line {
+			marker-start:url(#axisMarker-cartesian);
+			marker-end:url(#axisMarker-cartesian);
+		}
+	}
+
+
+	.polar-grid {
+		stroke: var(--colour-polar);
+		.axis  { stroke-width: 10px; }
+		.major { stroke-width: 2px; }
+		.minor { stroke-width: 1px; }
+		.label { fill: var(--colour-polar); }
+
+		.axis line {
+			marker-end:url(#axisMarker-polar);
+		}
+	}
+
+	marker path {
+		/* stroke-width:10px; */
+		fill: context-stroke;
+		opacity: 60%;
+		/* stroke: context-stroke; */
+	}
+
+
+	stroke-dasharray: 10 10;    /* dashes */
+	/* stroke-dasharray: 40 60; crosses
+	stroke-dashoffset: 20; */
+
+
+
+	.label {
+		stroke: none;
+		font-size: 25px;
+		dominant-baseline: ideographic;
+		font-family: monospace;
+	}
+
+	.cartesian-grid .label {
+		text-anchor: end;
+		.x {
+			writing-mode: vertical-lr;
+		}
+	}
+
+	.polar-grid .label {
+		text-anchor: start;
+	}
+
+	line:hover, circle:hover, path:hover {
+		stroke-width: 10px;
+		filter: drop-shadow(0px 0px 10px #fa0f);
+	}
+
+
+
+
+}/* .grid */
