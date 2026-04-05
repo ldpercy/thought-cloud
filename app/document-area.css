@@ -1,4 +1,11 @@
 
+svg * {
+	/* having difficulty getting transitions into the shadow dom at the moment, this is here for <use> elements until I can improve */
+	transition: all ease-in var(--transition-duration);
+}
+
+
+
 .grid {
 	--colour-cartesian: grey;
 	--colour-polar: var(--pink);
@@ -41,7 +48,8 @@
 	}
 
 
-	stroke-dasharray: 10 10;    /* dashes */
+	stroke-dasharray: 10 90;    /* dashes */
+	stroke-dashoffset: 5;
 	/* stroke-dasharray: 40 60; crosses
 	stroke-dashoffset: 20; */
 
