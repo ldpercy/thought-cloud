@@ -6,7 +6,7 @@ import { thoughtcloudApp } from "./thoughtcloudApp.js";
 
 let element;
 const elementMap = {
-	pageForm		: 'form-page',
+	appForm		: 'form-application',
 	appInfoDialog	: 'dialog-appInfo',
 };
 
@@ -26,13 +26,13 @@ class MainUserInterface {
 
 	/** @returns {string} */
 	get colourScheme() {
-		return element.pageForm.colourScheme.value;
+		return element.appForm.colourScheme.value;
 	}
 
 
 	/** @param {string} colourScheme */
 	set colourScheme(colourScheme) {
-		element.pageForm.colourScheme.value = colourScheme;
+		element.appForm.colourScheme.value = colourScheme;
 		thoughtcloudApp.setColourScheme(colourScheme);
 	}
 

@@ -7,15 +7,19 @@
 
 html {
 	--project-colour: skyblue;
-
-	--page-background-light: oklab(from var(--project-colour) 0.80 a b / alpha);
-	--page-background-dark: oklab(from var(--project-colour) 0.20 a b / alpha);
-
-	--accent-light: oklab(from var(--project-colour) 0.40 a b / alpha);
-	--accent-dark: oklab(from var(--project-colour) 0.60 a b / alpha);
-
 	--transition-duration: 0.5s;
 
+
+	--scheme-colour: oklab(from var(--project-colour) 0.80 a b / alpha);
+	--html-background: var(--scheme-colour);
+	--accent-colour: oklab(from var(--project-colour) 0.40 a b / alpha);
+	--text-colour: black;
+
+
+	background-color: var(--html-background);
+	accent-color: var(--accent-colour);
+	color: var(--text-colour);
+	color-scheme: light;
 
 	margin:0px;
 	padding:0px;
@@ -32,13 +36,17 @@ html {
 	body > svg { display:block; } /* fix the extra pixels on svg thing */
 }
 
-html[data-colourscheme="light"] {
-	color-scheme: light;
-	--accent: var(--accent-light);
-	accent-color: var(--accent);
-	background-color: var(--page-background-light);
-	color: black;
 
+
+
+html[data-colourscheme="light"] {
+
+	--scheme-colour: oklab(from var(--project-colour) 0.80 a b / alpha);
+	--html-background: var(--scheme-colour);
+	--accent-colour: oklab(from var(--project-colour) 0.40 a b / alpha);
+	--text-colour: black;
+
+	color-scheme: light;
 	form {
 		background-color:#eee9;
 		border-color: #bbbb;
@@ -47,12 +55,13 @@ html[data-colourscheme="light"] {
 }
 
 html[data-colourscheme="dark"] {
-	color-scheme: dark;
-	--accent: var(--accent-dark);
-	accent-color: var(--accent);
-	background-color: var(--page-background-dark);
-	color: white;
 
+	--scheme-colour: oklab(from var(--project-colour) 0.20 a b / alpha);
+	--html-background: var(--scheme-colour);
+	--accent-colour: oklab(from var(--project-colour) 0.60 a b / alpha);
+	--text-colour: white;
+
+	color-scheme: dark;
 	form {
 		background-color:#7779;
 		border-color: #9999;
@@ -60,10 +69,8 @@ html[data-colourscheme="dark"] {
 }
 
 
-@media (prefers-color-scheme:dark) {
 
-}
 
-@media (prefers-color-scheme:light) {
 
-}
+@media (prefers-color-scheme:dark) { }
+@media (prefers-color-scheme:light) { }
