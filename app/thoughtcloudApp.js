@@ -7,9 +7,9 @@ import { HTMLApp } from "../[html-common]/module/HTMLApp.js";
 import * as svg from "../[html-common]/module/SVG.js";
 import { Space } from "../[html-common]/module/PlanarSpace.js";
 
-//import { controller} from './controller.js';
+import { controller} from './controller.js';
 import { documentArea } from './document-area.js';
-//import { ui } from './html-ui.js';
+import { ui } from './main-ui.js';
 
 
 class ThoughtcloudApp extends HTMLApp {
@@ -56,11 +56,9 @@ class ThoughtcloudApp extends HTMLApp {
 
 		this.element.svg.setAttribute('viewBox', this.viewBox.toStringPadded(100));
 
-		//this.space = new Space(undefined,'turtle-space');
+		this.space = new Space(undefined,'thoughtcloud-space');
 
 		documentArea.drawGrid();
-
-
 	}
 
 

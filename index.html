@@ -17,7 +17,20 @@
 		<form id="form-application" tabindex="0">
 			<h1>Thought Cloud</h1>
 
-			<button type="button" id="button-showAppInfo" onclick="document.getElementById('dialog-appInfo').showModal();"><strong>🛈 Thought Cloud help</strong></button>
+
+			<label class="scheme" title="Colour scheme">
+				<label title="Light scheme">
+					<input type="radio" name="colourScheme" value="light" checked class="colourScheme-selector" data-colourscheme="light">
+					light
+				</label>
+				<label title="Dark scheme">
+					<input type="radio" name="colourScheme" value="dark" class="colourScheme-selector" data-colourscheme="dark">
+					dark
+				</label>
+			</label>
+
+
+			<button type="button" id="button-showAppInfo"><strong>🛈 Thought Cloud help</strong></button>
 
 		</form>
 	</div><!-- control-left -->
