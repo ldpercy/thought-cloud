@@ -82,3 +82,22 @@ svg * {
 
 
 }/* .grid */
+
+
+
+.pageItem {
+	fill:whitesmoke;
+	stroke: grey;
+	stroke-width:5px;
+	rx:20px;
+	ry:20px;
+
+}
+
+foreignObject {
+	overflow: scroll;
+}
+
+.pageItem-html {
+	font-size:4em;
+}

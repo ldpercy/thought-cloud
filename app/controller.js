@@ -32,6 +32,11 @@ class Controller {
 	/** @type {array} */
 	eventListeners = [
 		{
+			element: document.forms['application']['fileinput'],
+			type: 'change',
+			listener: (event) => { thoughtcloudApp.loadFile(event.target.files[0]); }
+		},
+		{
 			query: '.colourScheme-selector',
 			type: 'click',
 			listener: (event) => { ui.colourScheme = event.target.dataset.colourscheme; }
@@ -113,6 +118,9 @@ class Controller {
 
 
 
+
+
+
 	svgClickListener(event) {
 		//console.debug('svgClickListener', event);
 		const domPoint = new DOMPoint(event.clientX, event.clientY);
@@ -174,15 +182,11 @@ class Controller {
 
 	saveDrawing() {
 
-		//event.preventDefault();
-
-		//this.element.saveLink.download = 'polygon_download.svg';
-
-		const drawingGroupContent = document.getElementById('group-drawing').innerHTML;
+		const drawingGroupContent = document.getElementById('item-content').innerHTML;
 
 		const svgDoc = `
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1200 -1200 2400 2400" preserveAspectRatio="xMidYMid meet" >
-				<title>turtle drawing</title>
+				<title>thought cloud</title>
 				<g id="drawing-group" style="stroke:black;fill:grey;fill-opacity:50%; transform:scaleY(-1);">
 					${drawingGroupContent}
 				</g>

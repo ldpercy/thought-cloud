@@ -67,8 +67,32 @@ class ThoughtcloudApp extends HTMLApp {
 
 
 
+	/** @param {File} fileObj */
+	loadFile(fileObj) {
 
 
+		//document.forms['fileinput']['fileinput-textarea'].value = fileObj.text();
+		//console.log(fileObj.text());		// ugh promise
+
+
+		const reader = new FileReader();
+
+		reader.addEventListener(
+			"load",
+			() => {
+				// this will then display a text file
+				//content.innerText = reader.result;
+				//document.forms['fileinput']['fileinput-textarea'].value = reader.result;
+				document.getElementById('item-content').innerHTML = reader.result.toString();
+			},
+			false,
+		);
+
+		if (fileObj) {
+			reader.readAsText(fileObj);
+		}
+
+	}
 
 
 

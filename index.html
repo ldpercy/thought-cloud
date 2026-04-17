@@ -14,13 +14,22 @@
 <body>
 
 	<div class="control-group control-left">
-		<form id="form-application" tabindex="0">
+		<form id="form-application" name="application" tabindex="0">
 			<h1>Thought Cloud</h1>
+
+
+
+			<!-- <button type="button" name="button-load">load</button> -->
+			<input type="file" name="fileinput" id="input-loadfile">
+
+			<button type="button" id="button-save">save</button>
+			<a id="download-anchor" download="thought-cloud.text" href="" style="display:none;">download anchor</a>
+
 
 
 			<label class="scheme" title="Colour scheme">
 				<label title="Light scheme">
-					<input type="radio" name="colourScheme" value="light" checked class="colourScheme-selector" data-colourscheme="light">
+					<input type="radio" name="colourScheme" value="light" class="colourScheme-selector" data-colourscheme="light" checked>
 					light
 				</label>
 				<label title="Dark scheme">
@@ -66,6 +75,23 @@
 
 			<g id="group-drawing" class="drawing show-marker">
 				<!-- drawing elements go in here -->
+
+				<rect class="pageItem" x="-500" y="-400" width="700" height="500">
+
+
+				</rect>
+
+				<foreignObject x="-500" y="-400" width="700" height="500" class="pageItem-html">
+					<h3>item title</h3>
+					<pre id="item-content" contenteditable="plaintext-only">
+
+
+
+					</pre>
+				</foreignObject>
+
+
+
 			</g>
 
 		</g><!-- page -->
