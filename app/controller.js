@@ -7,7 +7,7 @@ import { HTMLApp } from "../[html-common]/module/HTMLApp.js";
 import { thoughtcloudApp } from "./thoughtcloudApp.js";
 import { ui } from './main-ui.js';
 import { documentArea } from "./document-area.js";
-
+import * as file from "./file.js"
 
 
 
@@ -34,7 +34,7 @@ class Controller {
 		{
 			element: document.forms['application']['fileinput'],
 			type: 'change',
-			listener: (event) => { thoughtcloudApp.loadFile(event.target.files[0]); }
+			listener: (event) => { file.loadFile(event.target.files[0], thoughtcloudApp.fileLoaded); }
 		},
 		{
 			query: '.colourScheme-selector',
