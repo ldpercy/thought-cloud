@@ -74,7 +74,7 @@ class Controller {
 		{
 			query: '#button-save',
 			type: 'click',
-			listener: this.saveDrawing,
+			listener: file.saveDocument,
 		},
 		{
 			query: '#button-showAppInfo',

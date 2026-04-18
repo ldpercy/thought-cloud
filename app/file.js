@@ -1,4 +1,7 @@
 
+import * as tcdoc from "./thoughtcloud-document.js"
+
+
 
 
 
@@ -32,6 +35,25 @@ export function loadFile(fileObj, callbackFn) {
 
 
 
+export function saveDocument() {
+
+	const saveDoc = new tcdoc.ThoughtcloudDocument();
+
+	saveDoc.title = 'Thought cloud document'
+	saveDoc.content = document.getElementById('group-page').innerHTML;
+
+	console.debug(saveDoc);
+
+	const html = tcdoc.getHTMLDocument(saveDoc);
+
+	const url = new URL(`data:text/plain;utf8,${encodeURIComponent(html)}`);
+
+	const downloadAnchor = /** @type {HTMLAnchorElement} */ (document.getElementById('download-anchor'));
+	downloadAnchor.href = url.toString();
+	downloadAnchor.click();
+	//console.log(url.toString());
+	downloadAnchor.href = '';
+}
 
 
 
