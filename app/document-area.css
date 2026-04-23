@@ -18,19 +18,47 @@ svg * {
 
 
 
-
 .pageItem {
 	fill:whitesmoke;
 	stroke: grey;
 	stroke-width:5px;
 	rx:20px;
 	ry:20px;
+}
+
+
+.pageItem {
+
+	.itemHandle {
+		r: 50px;
+		&:hover { cursor: grab; }
+	}
+
+	overflow: visible;
+
+	foreignObject {
+		overflow: visible;
+		fill: #eee;
+
+		main {
+			width: 30em;
+			overflow: visible;
+			border-radius: 1em;
+			padding:1em;
+			border:1px dashed silver;
+			background-color: whitesmoke;
+		}
+		pre {
+			white-space: pre-line;
+		}
+
+
+	}
 
 }
 
-foreignObject {
-	overflow: scroll;
-}
+
+
 
 .pageItem-html {
 	font-size:4em;

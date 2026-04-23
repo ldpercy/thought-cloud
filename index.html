@@ -66,33 +66,34 @@
 
 		<g id="group-page" class="page">
 			<g id="group-grid" class="grid">
-
 				<g id="group-cartesian">
 					<g id="group-cartesianGrid" class="cartesian-grid"></g>
 					<g id="group-cartesianPoint" class="cartesian-point"></g>
 				</g>
 			</g>
 
-			<g id="group-drawing" class="drawing show-marker">
+			<g id="group-drawing" class="drawing">
 				<!-- drawing elements go in here -->
 
-				<rect class="pageItem" x="-500" y="-400" width="700" height="500">
+				<g class="pageItem" transform="translate(-555 -444)">
+					<circle class="itemHandle" x="0" y="0">
+						<title>page item title text</title>
+					</circle>
+					<foreignObject x="0" y="0" width="500" height="500" class="pageItem-html">
+						<main>
+							<h3>item title</h3>
+							<pre id="item-content" contenteditable="plaintext-only">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+								Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</pre>
+						</main>
+					</foreignObject>
+				</g><!-- page item -->
 
 
-				</rect>
-
-				<foreignObject x="-500" y="-400" width="700" height="500" class="pageItem-html">
-					<h3>item title</h3>
-					<pre id="item-content" contenteditable="plaintext-only">
-
-
-
-					</pre>
-				</foreignObject>
-
-
-
-			</g>
+			</g><!-- group-drawing -->
 
 		</g><!-- page -->
 	</svg>
