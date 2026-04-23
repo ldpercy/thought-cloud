@@ -30,7 +30,7 @@ class ThoughtcloudApp extends HTMLApp {
 	elementMap = {
 		commandInput	: 'input-command',
 		pageForm		: 'form-page',
-		svg				: 'svg-element',
+		svg				: 'main-svg',
 		page			: 'group-page',
 	};
 

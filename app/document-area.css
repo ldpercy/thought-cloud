@@ -29,7 +29,12 @@ svg * {
 
 .pageItem {
 
+	x:0;
+	y:0;
+
 	.itemHandle {
+		cx:0;
+		cy:0;
 		r: 50px;
 		&:hover { cursor: grab; }
 	}

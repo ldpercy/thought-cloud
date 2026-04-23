@@ -15,6 +15,9 @@ import * as file from "./file.js"
 
 class Controller {
 
+	svgDocument
+
+
 
 	constructor() {
 		this.element = HTMLApp.buildElementMap(document, this.elementMap)
@@ -46,18 +49,9 @@ class Controller {
 			type: 'visibilitychange',
 			listener: () => { thoughtcloudApp.visibilitychangeListener(); }
 		},
+
 		// {
-		// 	query: '#svg-element',
-		// 	type: 'dblclick',
-		// 	listener: this.svgDblClickListener //()=>console.log('dblclick')//  // not firing sometimes for some reason???
-		// },
-		{
-			query: '#svg-element',
-			type: 'click',
-			listener: this.svgClickListener
-		},
-		// {
-		// 	query: '#svg-element',
+		// 	query: '#main-svg',
 		// 	type: 'keydown',
 		// 	listener: this.svgKeyListener
 		// },
@@ -119,48 +113,6 @@ class Controller {
 
 
 
-
-
-	svgClickListener(event) {
-		//console.debug('svgClickListener', event);
-		const domPoint = new DOMPoint(event.clientX, event.clientY);
-
-		const pageGroup = documentArea.svgElement.getElementById('group-page');
-
-		// Get point in page SVG space
-		const pagePoint = domPoint.matrixTransform(pageGroup.getScreenCTM().inverse());
-		//console.debug('pagePoint', pagePoint);
-
-		// /this.drawPoint(pagePoint.x, pagePoint.y);	// adding this line seems to cancel subsequent events - do I need to re-propagate the event or something?
-
-
-	}/* svgClickListener */
-
-
-	/* svgDblClickListener
-	* /
-	svgDblClickListener(event) {   // not firing for some reason???
-		//console.log('svgDblClickListener', event);
-
-		const domPoint = new DOMPoint(event.clientX, event.clientY);
-		const pageElement = document.getElementById('group-page');
-
-		// Get point in page SVG space
-		const pagePoint = domPoint.matrixTransform(pageElement.getScreenCTM().inverse());
-
-		const cmd = `xyTurn ${pagePoint.x}, ${-pagePoint.y}`;
-
-		//console.debug('svgClickListener', cmd);
-
-		this.doCommand(cmd);
-
-	}/ * svgDblClickListener */
-
-
-
-
-
-
 	//
 	//	handlers
 	//
@@ -182,7 +134,7 @@ class Controller {
 
 	saveDrawing() {
 
-		const drawingGroupContent = document.getElementById('item-content').innerHTML;
+		const drawingGroupContent = document.getElementById('main-svg').innerHTML;
 
 		const svgDoc = `
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1200 -1200 2400 2400" preserveAspectRatio="xMidYMid meet" >
