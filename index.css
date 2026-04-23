@@ -3,8 +3,9 @@
 */
 
 
-@import "./main-ui.css";
-@import "./document-area.css";
+@import "./app/main-ui.css";
+@import "./app/document-area.css";
+@import "./app/grid.css";
 
 
 
