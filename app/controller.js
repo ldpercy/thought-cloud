@@ -61,7 +61,7 @@ class Controller {
 			listener: this.documentKeyListener
 		},
 		{
-			query: 'textarea',
+			query: '[contenteditable=plaintext-only]',
 			type: 'keydown',
 			listener: (event)=>event.stopPropagation()
 		},

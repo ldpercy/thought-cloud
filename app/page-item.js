@@ -40,7 +40,7 @@ export class PageItem {
 			</circle>
 			<foreignObject x="0" y="0" width="500" height="500" class="pageItem-html">
 				<main>
-					<h3>item title</h3>
+					<h3 contenteditable="plaintext-only">item title</h3>
 					<pre contenteditable="plaintext-only">
 						${this.body}
 					</pre>
