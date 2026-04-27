@@ -53,6 +53,9 @@ html[data-colourscheme="light"] {
 	--text-colour: black;
 
 	color-scheme: light;
+
+
+	--background-lightness: 0.9;
 	form {
 		background-color:#eee9;
 		border-color: #bbbb;
@@ -68,6 +71,9 @@ html[data-colourscheme="dark"] {
 	--text-colour: white;
 
 	color-scheme: dark;
+
+	--background-lightness: 0.2;
+
 	form {
 		background-color:#7779;
 		border-color: #9999;
