@@ -17,9 +17,9 @@ html {
 	--transition-duration: 0.5s;
 
 
-	--scheme-colour: oklab(from var(--project-colour) 0.80 a b / alpha);
+	--scheme-colour: oklch(from var(--project-colour) 0.80 c h / alpha);
 	--html-background: var(--scheme-colour);
-	--accent-colour: oklab(from var(--project-colour) 0.40 a b / alpha);
+	--accent-colour: oklch(from var(--project-colour) 0.40 c h / alpha);
 	--text-colour: black;
 
 
@@ -48,9 +48,9 @@ html {
 
 html[data-colourscheme="light"] {
 
-	--scheme-colour: oklab(from var(--project-colour) 0.80 a b / alpha);
+	--scheme-colour: oklch(from var(--project-colour) 0.80 c h / alpha);
 	--html-background: var(--scheme-colour);
-	--accent-colour: oklab(from var(--project-colour) 0.40 a b / alpha);
+	--accent-colour: oklch(from var(--project-colour) 0.40 c h / alpha);
 	--text-colour: black;
 
 	color-scheme: light;
@@ -66,9 +66,9 @@ html[data-colourscheme="light"] {
 
 html[data-colourscheme="dark"] {
 
-	--scheme-colour: oklab(from var(--project-colour) 0.20 a b / alpha);
+	--scheme-colour: oklch(from var(--project-colour) 0.20 c h / alpha);
 	--html-background: var(--scheme-colour);
-	--accent-colour: oklab(from var(--project-colour) 0.60 a b / alpha);
+	--accent-colour: oklch(from var(--project-colour) 0.80 c h / alpha);
 	--text-colour: white;
 
 	color-scheme: dark;
