@@ -3,20 +3,6 @@
 a { color: var(--accent); }
 
 
-.control-group {
-
-	&.control-left {
-		position:absolute;
-		left:0ex;
-	}
-
-	&.control-right {
-		position:absolute;
-		right:0ex;
-	}
-
-}
-
 
 #dialog-appInfo {
 	&::backdrop { background-image:  url('../favicon.svg'); }
