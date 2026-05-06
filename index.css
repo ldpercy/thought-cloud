@@ -16,6 +16,7 @@
 html {
 	--project-colour: skyblue;
 	--transition-duration: 0.5s;
+	--default-panel-colour: var(--accent-colour);
 
 
 	--scheme-colour: oklch(from var(--project-colour) 0.80 c h / alpha);
@@ -58,10 +59,10 @@ html[data-colourscheme="light"] {
 
 
 	--background-lightness: 0.9;
-	form {
+	/* form {
 		background-color:#eee9;
 		border-color: #bbbb;
-	}
+	} */
 
 }
 
@@ -76,10 +77,10 @@ html[data-colourscheme="dark"] {
 
 	--background-lightness: 0.2;
 
-	form {
+	/* form {
 		background-color:#7779;
 		border-color: #9999;
-	}
+	} */
 }
 
 
