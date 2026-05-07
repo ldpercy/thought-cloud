@@ -16,7 +16,7 @@
 html {
 	--project-colour: skyblue;
 	--transition-duration: 0.5s;
-	--default-panel-colour: var(--accent-colour);
+	--default-panel-colour: var(--scheme-colour);
 
 
 	--scheme-colour: oklch(from var(--project-colour) 0.80 c h / alpha);
@@ -42,6 +42,9 @@ html {
 	font-size: 14px; /* 14px; */
 	font-family:'Noto sans', sans-serif;
 
+	transition:
+		background-color var(--transition-duration) linear;
+
 	body > svg { display:block; } /* fix the extra pixels on svg thing */
 }
 
@@ -57,12 +60,7 @@ html[data-colourscheme="light"] {
 
 	color-scheme: light;
 
-
 	--background-lightness: 0.9;
-	/* form {
-		background-color:#eee9;
-		border-color: #bbbb;
-	} */
 
 }
 
@@ -76,11 +74,6 @@ html[data-colourscheme="dark"] {
 	color-scheme: dark;
 
 	--background-lightness: 0.2;
-
-	/* form {
-		background-color:#7779;
-		border-color: #9999;
-	} */
 }
 
 
