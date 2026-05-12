@@ -15,7 +15,7 @@ import { ui } from './main-ui.js';
 class ThoughtcloudApp extends HTMLApp {
 
 	appName			= 'thought cloud';
-	appVersion		= 'v0.0.0';
+	appVersion		= 'v0.0.1';
 	projectColour	= 'skyblue';
 	appInfo = [`%c
 		Thought cloud ${this.appVersion} by ldpercy

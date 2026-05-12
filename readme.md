@@ -14,6 +14,7 @@ More detail in the [task/](<./task/>) directory.
 
 ### Recently Completed
 
+* Sync with html-common v0.3 for common styles
 * Initialise project
 
 
