@@ -1,15 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 -32 64 64">
 
 	<style>
-		rect {
-			fill: deepskyblue;
+		:root {
+			--project-colour: skyblue;
 		}
+
 		circle {
 			r:12px;
 			fill: whitesmoke;
 			stroke: silver;
 			stroke-width: 2px;
 		}
+
+		@media (prefers-color-scheme: light)	{
+			rect {
+				fill: oklch(from var(--project-colour) 0.70 c h / alpha);
+			}
+		}
+		@media (prefers-color-scheme: dark)		{
+			rect {
+				fill: oklch(from var(--project-colour) 0.30 c h / alpha);
+
+			}
+		}
+
 	</style>
 
 	<rect x="-32" y="-32" width="64" height="64"/>
